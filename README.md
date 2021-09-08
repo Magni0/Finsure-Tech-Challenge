@@ -13,3 +13,7 @@ Setting this all up took a little longer than I initaly thought it would, I had 
 ## Commit 2: Created Lender model
 
 I created the Lender Model and configured it to the admin site for manual testing, the model has some basic data valitation to make sure that potential data falls in the scope of what is suppose to be in the database.
+
+## FEATURE/endpoints: Outlined API endpoints
+
+I prepared all of the endpoint urls, a serializer for the model and added a docstring to each endpoint describing the functionality, now the endpoints need to just have their functionality added.
