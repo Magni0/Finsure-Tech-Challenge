@@ -1,0 +1,142 @@
+[
+    {
+        "name": "Philip Bradley Kramer",
+        "code": "PBK",
+        "upfront_commission_rate": 1.07,
+        "trial_commission_rate": 1.21,
+        "active": false
+    },
+    {
+        "name": "Herbert Carlos Green",
+        "code": "HCG",
+        "upfront_commission_rate": 0.9,
+        "trial_commission_rate": 0.85,
+        "active": true
+    },
+    {
+        "name": "Christine Christopher Dominguez",
+        "code": "CCD",
+        "upfront_commission_rate": 0.54,
+        "trial_commission_rate": 1.38,
+        "active": false
+    },
+    {
+        "name": "Christine Rhonda Diaz",
+        "code": "CRD",
+        "upfront_commission_rate": 1.41,
+        "trial_commission_rate": 1.24,
+        "active": true
+    },
+    {
+        "name": "Brent Lynn Jackson",
+        "code": "BLJ",
+        "upfront_commission_rate": 0.84,
+        "trial_commission_rate": 0.85,
+        "active": true
+    },
+    {
+        "name": "Bryan Amber Patterson",
+        "code": "BAP",
+        "upfront_commission_rate": 1.1,
+        "trial_commission_rate": 1.46,
+        "active": true
+    },
+    {
+        "name": "Scott Jennifer Smith",
+        "code": "SJS",
+        "upfront_commission_rate": 0.91,
+        "trial_commission_rate": 1.21,
+        "active": false
+    },
+    {
+        "name": "Angela Dustin Huerta",
+        "code": "ADH",
+        "upfront_commission_rate": 0.84,
+        "trial_commission_rate": 0.85,
+        "active": false
+    },
+    {
+        "name": "Francis Yvonne Parker",
+        "code": "FYP",
+        "upfront_commission_rate": 1.21,
+        "trial_commission_rate": 1.03,
+        "active": false
+    },
+    {
+        "name": "Michael Mary Mitchell",
+        "code": "MMM",
+        "upfront_commission_rate": 1.18,
+        "trial_commission_rate": 0.93,
+        "active": false
+    },
+    {
+        "name": "Kevin Mary Martin",
+        "code": "KMM",
+        "upfront_commission_rate": 1.42,
+        "trial_commission_rate": 0.79,
+        "active": false
+    },
+    {
+        "name": "Felicia Stephanie Matthews",
+        "code": "FSM",
+        "upfront_commission_rate": 0.9,
+        "trial_commission_rate": 0.98,
+        "active": false
+    },
+    {
+        "name": "Edwin Ryan Prince",
+        "code": "ERP",
+        "upfront_commission_rate": 0.62,
+        "trial_commission_rate": 0.76,
+        "active": false
+    },
+    {
+        "name": "William Ashley Butler",
+        "code": "WAB",
+        "upfront_commission_rate": 1.03,
+        "trial_commission_rate": 0.77,
+        "active": true
+    },
+    {
+        "name": "Justin Jack Sanchez",
+        "code": "JJS",
+        "upfront_commission_rate": 0.53,
+        "trial_commission_rate": 1.49,
+        "active": false
+    },
+    {
+        "name": "Leslie Miranda Mcguire",
+        "code": "LMM",
+        "upfront_commission_rate": 1.44,
+        "trial_commission_rate": 1.11,
+        "active": true
+    },
+    {
+        "name": "Samantha Adam Martinez",
+        "code": "SAM",
+        "upfront_commission_rate": 1.44,
+        "trial_commission_rate": 0.89,
+        "active": true
+    },
+    {
+        "name": "Kenneth William Frost",
+        "code": "KWF",
+        "upfront_commission_rate": 1.43,
+        "trial_commission_rate": 0.98,
+        "active": true
+    },
+    {
+        "name": "Michael Robert Murphy",
+        "code": "MRM",
+        "upfront_commission_rate": 1.06,
+        "trial_commission_rate": 1.16,
+        "active": false
+    },
+    {
+        "name": "Nathan Katelyn Evans",
+        "code": "NKE",
+        "upfront_commission_rate": 1.43,
+        "trial_commission_rate": 1.08,
+        "active": true
+    }
+]
