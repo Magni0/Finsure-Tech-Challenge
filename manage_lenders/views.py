@@ -1,7 +1,47 @@
+from django.http.response import HttpResponse
 from rest_framework import generics
 from rest_framework.views import APIView
 from .models import Lender
 from .serializers import LenderSerializer
+from django.core.paginator import Paginator
+from rest_framework.response import Response
+from django.http import JsonResponse
+from django.core import serializers
+from json import dumps, loads
+from django.forms.models import model_to_dict
+
+
+def paginator_serialization(lenders, page_num):
+    
+    """
+    This function is used for ListLenders & ListActiveLenders
+    endpoints to split the lenders into pages and convert
+    those pages into the json format
+    """
+
+    lender_pages = Paginator(lenders, 5)
+    pages = lender_pages.page_range[-1]
+    page = lender_pages.page(page_num)
+    lender_objects = page.object_list
+
+    lender_json = serializers.serialize('json', lender_objects)
+
+    lender_list = []
+
+    for lender in loads(lender_json):
+        lender_list.append({
+            'id': lender['pk'],
+            'name': lender['fields']['name'],
+            'code': lender['fields']['code'],
+            'upfront_commission_rate': lender['fields']['upfront_commission_rate'],
+            'trial_commission_rate': lender['fields']['trial_commission_rate'],
+            'active': lender['fields']['active'],
+        })
+
+    lender_dict= {'pages': pages, 'lenders': lender_list}
+
+    return dumps(lender_dict)
+
 
 class ListLenders(APIView):
 
@@ -10,7 +50,13 @@ class ListLenders(APIView):
     of five for Pagination
     """
 
-    pass
+    def get(self, request, *args, **kwargs):
+        page_num = request.GET.get('page', 1)
+        lenders = Lender.objects.all()
+        content = paginator_serialization(lenders, page_num)
+
+        return HttpResponse(content, content_type='application/json')
+
 
 class ListActiveLenders(APIView):
 
@@ -19,7 +65,12 @@ class ListActiveLenders(APIView):
     of five for Pagination
     """
 
-    pass
+    def get(self, request, *args, **kwargs):
+        page_num = request.GET.get('page', 1)
+        lenders = Lender.objects.filter(active=True)
+        content = paginator_serialization(lenders, page_num)
+
+        return HttpResponse(content, content_type='application/json')
 
 class CreateLender(generics.CreateAPIView):
 

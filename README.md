@@ -14,6 +14,14 @@ Setting this all up took a little longer than I initaly thought it would, I had 
 
 I created the Lender Model and configured it to the admin site for manual testing, the model has some basic data valitation to make sure that potential data falls in the scope of what is suppose to be in the database.
 
-## FEATURE/endpoints: Outlined API endpoints
+## FEATURE/endpoints Branch: Outlined API endpoints
 
 I prepared all of the endpoint urls, a serializer for the model and added a docstring to each endpoint describing the functionality, now the endpoints need to just have their functionality added.
+
+## FEATURE/endpoints Branch: Implemented list pages functionality
+
+I made 2 diffrent endpoints for listing pages one returns a group of 5 lenders per page regardless of active status and the other only returns those with an active status. a querystring is used to determine which page the url looks like this:
+
+`http://127.0.0.1:8000/lenders/list?page=1`
+
+The hardest part of doing these endpoints was figuring out how to convert a QuerySet of Model objects into a json serializable format.

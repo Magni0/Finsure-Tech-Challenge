@@ -3,7 +3,7 @@ from .views import *
 
 app_name = "manage_lenders"
 
-urlpattern = [
+urlpatterns = [
     path("lenders/list", ListLenders.as_view(), name="list_lenders"),
     path("lenders/list/active", ListActiveLenders.as_view(), name="list_active_lenders"),
     path("lenders/create", CreateLender.as_view(), name="create_lender"),
