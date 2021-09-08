@@ -4,12 +4,12 @@ from .views import *
 app_name = "manage_lenders"
 
 urlpattern = [
-    path("", ListLenders.as_view(), name="list_lenders"),
-    path("", ListActiveLenders.as_view(), name="list_active_lenders"),
-    path("", CreateLender.as_view(), name="create_lender"),
-    path("", GetLender.as_view(), name="get_lender"),
-    path("", UpdateLender.as_view(), name="update_lender"),
-    path("", DeleteLender.as_view(), name="delete_lender"),
-    path("", BulkCSVUpload.as_view(), name="bulk_csv_upload"),
-    path("", BulkCSVDownload.as_view(), name="bulk_csv_download"),
+    path("lenders/list", ListLenders.as_view(), name="list_lenders"),
+    path("lenders/list/active", ListActiveLenders.as_view(), name="list_active_lenders"),
+    path("lenders/create", CreateLender.as_view(), name="create_lender"),
+    path("lenders/get/<int:pk>", GetLender.as_view(), name="get_lender"),
+    path("lenders/update/<int:pk>", UpdateLender.as_view(), name="update_lender"),
+    path("lenders/delete/<int:pk>", DeleteLender.as_view(), name="delete_lender"),
+    path("lenders/upload", BulkCSVUpload.as_view(), name="bulk_csv_upload"),
+    path("lenders/download", BulkCSVDownload.as_view(), name="bulk_csv_download"),
 ]

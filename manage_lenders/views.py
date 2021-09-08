@@ -25,13 +25,15 @@ class CreateLender(generics.CreateAPIView):
 
     """Creates a single lender record"""
 
-    pass
+    queryset = Lender
+    serializer_class = LenderSerializer
 
 class GetLender(generics.RetrieveAPIView):
     
     """Returns a single lender record specified by record id"""
     
-    pass
+    queryset = Lender
+    serializer_class = LenderSerializer
 
 class UpdateLender(generics.UpdateAPIView):
     
@@ -41,13 +43,15 @@ class UpdateLender(generics.UpdateAPIView):
     full update done with PUT method
     """
 
-    pass
+    queryset = Lender
+    serializer_class = LenderSerializer
 
 class DeleteLender(generics.DestroyAPIView):
 
     """Deletes a single lender record specified by record id"""
 
-    pass
+    queryset = Lender
+    serializer_class = LenderSerializer
 
 class BulkCSVUpload(APIView):
 
