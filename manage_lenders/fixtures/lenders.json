@@ -1,0 +1,222 @@
+[
+    {
+        "model": "manage_lenders.lender",
+        "pk": 1,
+        "fields": {
+            "name": "Brianna Jamie Gonzalez",
+            "code": "BJG",
+            "upfront_commission_rate": 1.01,
+            "trial_commission_rate": 0.85,
+            "active": false
+        }
+    },
+    {
+        "model": "manage_lenders.lender",
+        "pk": 2,
+        "fields": {
+            "name": "Kathryn Ruth Stephenson",
+            "code": "KRS",
+            "upfront_commission_rate": 0.86,
+            "trial_commission_rate": 1.44,
+            "active": false
+        }
+    },
+    {
+        "model": "manage_lenders.lender",
+        "pk": 3,
+        "fields": {
+            "name": "Richard Steven Fletcher",
+            "code": "RSF",
+            "upfront_commission_rate": 0.6,
+            "trial_commission_rate": 0.59,
+            "active": true
+        }
+    },
+    {
+        "model": "manage_lenders.lender",
+        "pk": 4,
+        "fields": {
+            "name": "Jeffrey Harold Cooley",
+            "code": "JHC",
+            "upfront_commission_rate": 1.15,
+            "trial_commission_rate": 0.9,
+            "active": true
+        }
+    },
+    {
+        "model": "manage_lenders.lender",
+        "pk": 5,
+        "fields": {
+            "name": "Richard William Kennedy",
+            "code": "RWK",
+            "upfront_commission_rate": 0.69,
+            "trial_commission_rate": 1.29,
+            "active": true
+        }
+    },
+    {
+        "model": "manage_lenders.lender",
+        "pk": 6,
+        "fields": {
+            "name": "Joshua Lisa Huff",
+            "code": "JLH",
+            "upfront_commission_rate": 1.33,
+            "trial_commission_rate": 0.93,
+            "active": false
+        }
+    },
+    {
+        "model": "manage_lenders.lender",
+        "pk": 7,
+        "fields": {
+            "name": "Amanda Michael Brown",
+            "code": "AMB",
+            "upfront_commission_rate": 0.74,
+            "trial_commission_rate": 1.3,
+            "active": false
+        }
+    },
+    {
+        "model": "manage_lenders.lender",
+        "pk": 8,
+        "fields": {
+            "name": "Richard Nancy Small",
+            "code": "RNS",
+            "upfront_commission_rate": 1.5,
+            "trial_commission_rate": 0.52,
+            "active": false
+        }
+    },
+    {
+        "model": "manage_lenders.lender",
+        "pk": 9,
+        "fields": {
+            "name": "Michael Michael Roman",
+            "code": "MMR",
+            "upfront_commission_rate": 0.69,
+            "trial_commission_rate": 1.18,
+            "active": false
+        }
+    },
+    {
+        "model": "manage_lenders.lender",
+        "pk": 10,
+        "fields": {
+            "name": "Oscar Danielle Wilson",
+            "code": "ODW",
+            "upfront_commission_rate": 1.18,
+            "trial_commission_rate": 0.88,
+            "active": true
+        }
+    },
+    {
+        "model": "manage_lenders.lender",
+        "pk": 11,
+        "fields": {
+            "name": "Jonathan Benjamin Baldwin",
+            "code": "JBB",
+            "upfront_commission_rate": 0.65,
+            "trial_commission_rate": 1.0,
+            "active": true
+        }
+    },
+    {
+        "model": "manage_lenders.lender",
+        "pk": 12,
+        "fields": {
+            "name": "Janet Fernando Byrd",
+            "code": "JFB",
+            "upfront_commission_rate": 0.51,
+            "trial_commission_rate": 0.69,
+            "active": true
+        }
+    },
+    {
+        "model": "manage_lenders.lender",
+        "pk": 13,
+        "fields": {
+            "name": "Susan Joyce Beck",
+            "code": "SJB",
+            "upfront_commission_rate": 0.75,
+            "trial_commission_rate": 0.94,
+            "active": true
+        }
+    },
+    {
+        "model": "manage_lenders.lender",
+        "pk": 14,
+        "fields": {
+            "name": "Courtney Kelly Miller",
+            "code": "CKM",
+            "upfront_commission_rate": 0.87,
+            "trial_commission_rate": 0.86,
+            "active": true
+        }
+    },
+    {
+        "model": "manage_lenders.lender",
+        "pk": 15,
+        "fields": {
+            "name": "Christopher Jesse Wyatt",
+            "code": "CJW",
+            "upfront_commission_rate": 1.17,
+            "trial_commission_rate": 1.16,
+            "active": false
+        }
+    },
+    {
+        "model": "manage_lenders.lender",
+        "pk": 16,
+        "fields": {
+            "name": "Matthew Christopher Johnston",
+            "code": "MCJ",
+            "upfront_commission_rate": 1.36,
+            "trial_commission_rate": 1.09,
+            "active": true
+        }
+    },
+    {
+        "model": "manage_lenders.lender",
+        "pk": 17,
+        "fields": {
+            "name": "Alicia Edward Trujillo",
+            "code": "AET",
+            "upfront_commission_rate": 1.18,
+            "trial_commission_rate": 1.01,
+            "active": true
+        }
+    },
+    {
+        "model": "manage_lenders.lender",
+        "pk": 18,
+        "fields": {
+            "name": "Donald Lisa Johnson",
+            "code": "DLJ",
+            "upfront_commission_rate": 1.25,
+            "trial_commission_rate": 1.0,
+            "active": false
+        }
+    },
+    {
+        "model": "manage_lenders.lender",
+        "pk": 19,
+        "fields": {
+            "name": "Gary Edward Rose",
+            "code": "GER",
+            "upfront_commission_rate": 1.2,
+            "trial_commission_rate": 0.74,
+            "active": false
+        }
+    },
+    {
+        "model": "manage_lenders.lender",
+        "pk": 20,
+        "fields": {
+            "name": "Jonathan Jeremiah Hoover",
+            "code": "JJH",
+            "upfront_commission_rate": 0.87,
+            "trial_commission_rate": 1.28,
+            "active": true
+        }
+    }
+]
