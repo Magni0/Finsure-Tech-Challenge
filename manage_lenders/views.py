@@ -6,6 +6,7 @@ from .serializers import LenderSerializer
 from django.core.paginator import Paginator
 from django.core import serializers
 from json import dumps, loads
+import csv
 
 
 class ListLenders(APIView):
@@ -26,10 +27,10 @@ class ListLenders(APIView):
 
         # split lenders into pages of 5
         lender_pages = Paginator(lenders, 5)
-        
-        # find the max amount of pages  
+
+        # find the max amount of pages
         pages = lender_pages.page_range[-1]
-        
+
         # get lenders of specified page
         # use querystring: page={page number}
         try:
@@ -112,4 +113,33 @@ class BulkCSVDownload(APIView):
     Downloads all lenders in csv format to cilent 
     """
 
-    pass
+    def get(self, request, *args, **kwargs):
+        response = HttpResponse(
+            content_type='text/csv',
+            headers={'Content-Disposition': 'attachment; filename="lenders.csv"'},
+        )
+        lenders = Lender.objects.all()
+
+        writer = csv.writer(response)
+        writer.writerow([
+            'ID',
+            'NAME',
+            'CODE',
+            'UPRONT COMMISSION RATE',
+            'TRIAL COMMISSION RATE',
+            'ACTIVE'
+        ])
+
+        lender_values = lenders.values_list(
+            'id',
+            'name',
+            'code',
+            'upfront_commission_rate',
+            'trial_commission_rate',
+            'active'
+            )
+
+        for lender in lender_values:
+            writer.writerow(lender)
+
+        return response

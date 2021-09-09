@@ -29,3 +29,7 @@ The hardest part of doing these endpoints was figuring out how to convert a Quer
 ## FEATURE/endpoints Branch: Refactored list lenders endpoint
 
 After sleeping on it, I figured out how to make listing lenders and listing active lenders alot neater I also found an edgecase that I had initially missed as well as clearing up unused imports and dependencies.
+
+## FEATURE/endpoints Branch: Added download lenders in csv format
+
+Due to the commonality of this desired functionality, there was a lot of documentation and tutorials, this ended up being easier than I first thought.
