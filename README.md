@@ -25,3 +25,7 @@ I made 2 diffrent endpoints for listing pages one returns a group of 5 lenders p
 `http://127.0.0.1:8000/lenders/list?page=1`
 
 The hardest part of doing these endpoints was figuring out how to convert a QuerySet of Model objects into a json serializable format.
+
+## FEATURE/endpoints Branch: Refactored list lenders endpoint
+
+After sleeping on it, I figured out how to make listing lenders and listing active lenders alot neater I also found an edgecase that I had initially missed as well as clearing up unused imports and dependencies.
