@@ -66,6 +66,7 @@ class LenderTests(APITestCase):
         response = self.client.delete(url)
         self.assertEqual(response.status_code, 204)
 
+    # currently broken! miss handle data types of test csv file
     # def test_bulk_csv_upload(self):
     #     url = reverse("manage_lenders:bulk_csv_upload")
     #     file = SimpleUploadedFile(

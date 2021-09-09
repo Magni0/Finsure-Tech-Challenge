@@ -13,7 +13,8 @@ class ListLenders(APIView):
 
     """
     Returns a list of all Lenders split in groups
-    of five for Pagination
+    of five for Pagination use query string active=true
+    to only return active lenders
     """
 
     def get(self, request, *args, **kwargs):
