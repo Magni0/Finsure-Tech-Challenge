@@ -117,11 +117,11 @@ class BulkCSVUpload(APIView):
             lender = str(lender)
             lender_list = lender.split(",")
             lender_record = Lender(
-                name=lender_list[1],
-                code=lender_list[2],
-                upfront_commission_rate=lender_list[3],
-                trial_commission_rate=lender_list[4],
-                active=bool(lender_list[5])
+                name=lender_list[0],
+                code=lender_list[1],
+                upfront_commission_rate=lender_list[2],
+                trial_commission_rate=lender_list[3],
+                active=bool(lender_list[4])
             )
             lender_record.save()
 

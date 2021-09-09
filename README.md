@@ -47,3 +47,7 @@ Due to the commonality of this desired functionality, there was a lot of documen
 ## FEATURE/endpoints Branch: Added upload lenders in csv format
 
 Now can bulk upload lenders to the database using a post request to `/lenders/upload` with a multipart form body with the name 'lenders' and a csv file.
+
+## FEATURE/tests Branch: Added test for bulk csv download
+
+I made a basic test for the csv download endpoint that just checks that it returns the correct status code and I made a test for the upload as well however that is commented out at the moment as it is not working, I need to figure out how to properly mimic uploading a csv file as it's currently throwing a data type error. I know that the bulk upload csv endpoint is working from manual testing even though this test is tacking up an unreasonable amount of time to get it working, at this point I would ask for help instead of using up more time.
