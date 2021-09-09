@@ -22,7 +22,7 @@ I prepared all of the endpoint urls, a serializer for the model and added a docs
 
 I made 2 diffrent endpoints for listing pages one returns a group of 5 lenders per page regardless of active status and the other only returns those with an active status. a querystring is used to determine which page the url looks like this:
 
-`http://127.0.0.1:8000/lenders/list?page=1`
+`/lenders/list?page=1`
 
 The hardest part of doing these endpoints was figuring out how to convert a QuerySet of Model objects into a json serializable format.
 
@@ -33,3 +33,7 @@ After sleeping on it, I figured out how to make listing lenders and listing acti
 ## FEATURE/endpoints Branch: Added download lenders in csv format
 
 Due to the commonality of this desired functionality, there was a lot of documentation and tutorials, this ended up being easier than I first thought.
+
+## FEATURE/endpoints Branch: Added upload lenders in csv format
+
+Now can bulk upload lenders to the database using a post request to `/lenders/upload` with a multipart form body with the name 'lenders' and a csv file.

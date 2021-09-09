@@ -104,7 +104,28 @@ class BulkCSVUpload(APIView):
     provided in csv format 
     """
 
-    pass
+    def post(self, request, *args, **kwargs):
+        csv_file = request.FILES['lenders']
+
+        # checks that the file is csv
+        if not csv_file.name.endswith(".csv"):
+            return HttpResponseBadRequest()
+
+        lenders = csv_file.readlines()
+        lenders.pop(0)
+        for lender in lenders:
+            lender = str(lender)
+            lender_list = lender.split(",")
+            lender_record = Lender(
+                name=lender_list[1],
+                code=lender_list[2],
+                upfront_commission_rate=lender_list[3],
+                trial_commission_rate=lender_list[4],
+                active=bool(lender_list[5])
+            )
+            lender_record.save()
+
+        return HttpResponse(status=201)
 
 
 class BulkCSVDownload(APIView):
@@ -137,7 +158,7 @@ class BulkCSVDownload(APIView):
             'upfront_commission_rate',
             'trial_commission_rate',
             'active'
-            )
+        )
 
         for lender in lender_values:
             writer.writerow(lender)
