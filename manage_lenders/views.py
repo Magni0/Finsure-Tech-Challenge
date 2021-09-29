@@ -18,6 +18,7 @@ class ListCreateLender(ListCreateAPIView):
 
     def get(self, request, *args, **kwargs):
         page_num = request.GET.get('page', 1)
+        page_size = request.GET.get('page_size', 5)
 
         # if querystring active=true list only active lenders
         if request.GET.get('active', False):
@@ -25,8 +26,8 @@ class ListCreateLender(ListCreateAPIView):
         else:
             lenders = Lender.objects.all()
 
-        # split lenders into pages of 5
-        lender_pages = Paginator(lenders, 5)
+        # split lenders into pages of secified size, defaults to 5
+        lender_pages = Paginator(lenders, page_size)
 
         # find the max amount of pages
         pages = lender_pages.page_range[-1]

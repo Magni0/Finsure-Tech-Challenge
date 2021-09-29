@@ -2,7 +2,7 @@
 
 ## TO DO
 
-1. add more flexability to page size for pagination
+1. add more flexability to page size for pagination ✓
 2. optimize the database query for pagination
 3. fix urls to make it RESTful ✓
 4. fix views to make them RESTful ✓
