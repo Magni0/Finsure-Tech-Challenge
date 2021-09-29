@@ -60,7 +60,7 @@ class ListCreateLender(ListCreateAPIView):
 
         content = dumps(lender_dict)
 
-        return HttpResponse(content, content_type='application/json')
+        return HttpResponse(content, content_type='application/vnd.api+json')
 
 
 class GetUpdateDeleteLender(RetrieveUpdateDestroyAPIView):
@@ -81,21 +81,44 @@ class BulkCSVUpload(APIView):
 
         # checks that the file is csv
         if not csv_file.name.endswith(".csv"):
-            return HttpResponseBadRequest()
+            error_content = {
+                "errors": [
+                    {
+                        "status": "400",
+                        "source": {"pointer": "/lenders/upload"},
+                        "title":  "Invalid FileType",
+                        "detail": "File type must be csv and contain .csv extention"
+                    }
+                ]
+            }
+            return HttpResponseBadRequest(error_content, content_type='application/vnd.api+json')
 
-        lenders = csv_file.readlines()
-        lenders.pop(0)
-        for lender in lenders:
-            lender = str(lender)
-            lender_list = lender.split(",")
-            lender_record = Lender(
-                name=lender_list[0],
-                code=lender_list[1],
-                upfront_commission_rate=lender_list[2],
-                trial_commission_rate=lender_list[3],
-                active=bool(lender_list[4])
-            )
-            lender_record.save()
+        try:
+            lenders = csv_file.readlines()
+            lenders.pop(0)
+            for lender in lenders:
+                lender = str(lender)
+                lender_list = lender.split(",")
+                lender_record = Lender(
+                    name=lender_list[0],
+                    code=lender_list[1],
+                    upfront_commission_rate=lender_list[2],
+                    trial_commission_rate=lender_list[3],
+                    active=bool(lender_list[4])
+                )
+                lender_record.save()
+        except:
+            error_content = {
+                "errors": [
+                    {
+                        "status": "400",
+                        "source": {"pointer": "/lenders/upload"},
+                        "title":  "Invalid Data Structure",
+                        "detail": "File structure must contain headers and data be in order NAME,CODE,UPRONT COMMISSION RATE,TRIAL COMMISSION RATE,ACTIVE"
+                    }
+                ]
+            }
+            return HttpResponseBadRequest(error_content, content_type='application/vnd.api+json')
 
         return HttpResponse(status=201)
 

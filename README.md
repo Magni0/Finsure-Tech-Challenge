@@ -2,12 +2,14 @@
 
 ## TO DO
 
+~ = in progress | ✓ = complete
+
 1. add more flexability to page size for pagination ✓
 2. optimize the database query for pagination ✓
 3. fix urls to make it RESTful ✓
 4. fix views to make them RESTful ✓
 5. implement Multithreading into bulk upload view
-6. fix response json in views to make it RESTful
+6. fix response json in views to make it RESTful ~
 
 ## Installation instructions
 
