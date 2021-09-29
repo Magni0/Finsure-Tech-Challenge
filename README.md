@@ -9,6 +9,7 @@
 5. implement Multithreading into bulk upload view
 
 ## installation instructions
+## Installation instructions
 
 1. Clone the repository, uncompress the archive and navigate into the root directory from in the terminal
 2. Create a python virtual environment using `python -m venv venv`
