@@ -4,11 +4,10 @@
 
 1. add more flexability to page size for pagination
 2. optimize the database query for pagination
-3. fix urls to make it RESTful
-4. fix view to make them RESTful
+3. fix urls to make it RESTful ✓
+4. fix views to make them RESTful ✓
 5. implement Multithreading into bulk upload view
 
-## installation instructions
 ## Installation instructions
 
 1. Clone the repository, uncompress the archive and navigate into the root directory from in the terminal

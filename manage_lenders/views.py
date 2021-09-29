@@ -1,5 +1,5 @@
 from django.http.response import HttpResponse, HttpResponseBadRequest
-from rest_framework import generics
+from rest_framework.generics import RetrieveUpdateDestroyAPIView, ListCreateAPIView
 from rest_framework.views import APIView
 from .models import Lender
 from .serializers import LenderSerializer
@@ -9,13 +9,12 @@ from json import dumps, loads
 import csv
 
 
-class ListLenders(APIView):
+class ListCreateLender(ListCreateAPIView):
 
-    """
-    Returns a list of all Lenders split in groups
-    of five for Pagination use query string active=true
-    to only return active lenders
-    """
+    """Creates a single lender record"""
+
+    queryset = Lender
+    serializer_class = LenderSerializer
 
     def get(self, request, *args, **kwargs):
         page_num = request.GET.get('page', 1)
@@ -62,37 +61,7 @@ class ListLenders(APIView):
         return HttpResponse(content, content_type='application/json')
 
 
-class CreateLender(generics.CreateAPIView):
-
-    """Creates a single lender record"""
-
-    queryset = Lender
-    serializer_class = LenderSerializer
-
-
-class GetLender(generics.RetrieveAPIView):
-
-    """Returns a single lender record specified by record id"""
-
-    queryset = Lender
-    serializer_class = LenderSerializer
-
-
-class UpdateLender(generics.UpdateAPIView):
-
-    """
-    Updates a single lender record specified by record id,
-    a partial update is done with PATCH method and a 
-    full update done with PUT method
-    """
-
-    queryset = Lender
-    serializer_class = LenderSerializer
-
-
-class DeleteLender(generics.DestroyAPIView):
-
-    """Deletes a single lender record specified by record id"""
+class GetUpdateDeleteLender(RetrieveUpdateDestroyAPIView):
 
     queryset = Lender
     serializer_class = LenderSerializer
