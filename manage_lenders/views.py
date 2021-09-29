@@ -23,6 +23,7 @@ class ListCreateLender(ListCreateAPIView):
         # if querystring active=true list only active lenders
         if request.GET.get('active', False):
             lenders = Lender.objects.filter(active=True)
+            print(Lender.objects.filter(active=True).explain())
         else:
             lenders = Lender.objects.all()
 
